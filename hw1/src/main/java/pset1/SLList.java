@@ -6,10 +6,12 @@ import java.util.Set;
 public class SLList {
     Node first; // first node in <this> list
     Node last; // last node in <this> list
+
     static class Node {
         boolean elem;
         Node next;
     }
+    
     boolean repOk() {
         // postcondition: returns true iff <this> is an acyclic list, i.e.,
         // there is no path from a node to itself

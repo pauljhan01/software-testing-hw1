@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class SLListAddTester {
 
-    @Test public void testSLListOneNode() {
+    @Test public void test0() {
         SLList l = new SLList();
         assertTrue(l.repOk());
         l.add(true);
@@ -19,7 +19,7 @@ public class SLListAddTester {
         assertTrue(l.first == l.last);
     }
 
-    @Test public void testSLListTwoNodes() {
+    @Test public void test1() {
         SLList l = new SLList();
         assertTrue(l.repOk());
         l.add(true);

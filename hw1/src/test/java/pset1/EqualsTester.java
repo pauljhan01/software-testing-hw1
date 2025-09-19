@@ -1,4 +1,5 @@
 package pset1;
+
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -73,20 +74,6 @@ public class EqualsTester {
         assertFalse((!o.equals(d) || d.equals(o)) && (!d.equals(o) || o.equals(d)));
     }
 
-    @Test public void p3_obj_obj(){
-        Object o1 = new Object();
-        Object o2 = new Object();
-
-        assertTrue((!o1.equals(o2) || o2.equals(o1)) && (!o2.equals(o1) || o1.equals(o1)));
-    }
-
-    @Test public void p3_c_c(){
-        C c1 = new C(0);
-        C c2 = new C(0);
-
-        assertTrue((!c1.equals(c2) || c2.equals(c1)) && (!c2.equals(c1) || c1.equals(c2)));
-    }
-
     @Test public void p3_c_d(){
         C c = new C(0);
         D d = new D(0,0);
@@ -101,13 +88,48 @@ public class EqualsTester {
         assertFalse((!d.equals(c) || c.equals(d)) && (!c.equals(d) || d.equals(c)));
     }
 
-    @Test public void p3_d_d(){
+    @Test public void p3_obj_obj_false(){
+        Object o1 = new Object();
+        Object o2 = new Object();
+
+        assertFalse((!o1.equals(o2) || o2.equals(o1)) && (!o2.equals(o1) || o1.equals(o1)));
+    }
+
+    @Test public void p3_obj_obj_true(){
+        Object o1 = new Object();
+        Object o2 = o1;
+
+        assertTrue((!o1.equals(o2) || o2.equals(o1)) && (!o2.equals(o1) || o1.equals(o1)));
+    }
+
+    @Test public void p3_c_c_false(){
+        C c1 = new C(0);
+        C c2 = new C(0);
+
+        assertFalse((!c1.equals(c2) || c2.equals(c1)) && (!c2.equals(c1) || c1.equals(c2)));
+    }
+
+    @Test public void p3_c_c_true(){
+        C c1 = new C(0);
+        C c2 = c1;
+
+        assertTrue((!c1.equals(c2) || c2.equals(c1)) && (!c2.equals(c1) || c1.equals(c2)));
+    }
+
+    @Test public void p3_d_d_false(){
         D d1 = new D(0,0);
         D d2 = new D(0,0);
 
         assertFalse((!d1.equals(d2) || d2.equals(d1)) && (!d2.equals(d1) || d1.equals(d2)));
     }
-        
+
+    @Test public void p3_d_d_true(){
+        D d1 = new D(0,0);
+        D d2 = d1;
+
+        assertTrue((!d1.equals(d2) || d2.equals(d1)) && (!d2.equals(d1) || d1.equals(d2)));
+    }
+
     /*
     * P4: It is transitive: for any non-null reference values x, y, and z,
     * if x.equals(y) returns true and y.equals(z) returns true, then

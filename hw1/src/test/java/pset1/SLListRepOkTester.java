@@ -10,7 +10,8 @@ public class SLListRepOkTester {
         assertTrue(l.repOk());
     }
 
-    @Test public void testRepOkOneNodeValid() {
+    // repOkOneNodeValid
+    @Test public void t1() {
         SLList l = new SLList();
         Node first = new Node();
 
@@ -20,7 +21,8 @@ public class SLListRepOkTester {
         assertTrue(l.repOk());
     }
     // your code goes here
-    @Test public void testRepOkOneNodeInvalid() {
+    // repOkOneNodeInvalid
+    @Test public void t2() {
         SLList l = new SLList();
         Node first = new Node();
 
@@ -30,7 +32,8 @@ public class SLListRepOkTester {
         assertFalse(l.repOk());
     }
 
-    @Test public void testRepOkTwoNodesValid() {
+    // repOkTwoNodesValid
+    @Test public void t3() {
         SLList l = new SLList();
         Node first = new Node();
         Node last  = new Node();
@@ -43,7 +46,8 @@ public class SLListRepOkTester {
         assertTrue(l.repOk());
     }
 
-    @Test public void testRepOkTwoNodesInvalid(){
+    // repOkTwoNodesInvalid
+    @Test public void t4(){
         SLList l = new SLList();
         Node first = new Node();
         Node last = new Node();
